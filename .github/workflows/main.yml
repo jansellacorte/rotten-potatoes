@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-    - name: Docker Login
-      uses: docker/login-action@v1.12.0
-      with:
-        username: # ${{ secrets.DOCKERHUB_USER }}
-        password: # ${{ secrets.DOCKERHUB_PWD }}
+      - name: Docker Login
+        uses: docker/login-action@v1.12.0
+        with:
+          username: ${{ secrets.DOCKERHUB_USER }}
+          password: ${{ secrets.DOCKERHUB_PWD }}
 
 
